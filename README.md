@@ -6,7 +6,7 @@ A Vite + React dashboard backed by a Node/Express proxy that aggregates Jira DC 
 
 - Secure proxy that fans out Jira requests and never exposes PATs to the browser
 - PI and Telescope filters persisted to URL + localStorage for shareable state
-- Nivo sunburst with duplication handling, keyboard focus, tooltips, and truncation warnings
+- Vasturiano sunburst-chart with duplication handling and tooltips
 - In-app sidebar with rich issue metadata and deep links back to Jira
 - Multi-stage Docker build for prod deployment
 
