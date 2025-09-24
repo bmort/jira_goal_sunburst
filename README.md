@@ -1,4 +1,4 @@
-# Jira Goal Starburst
+# Jira Goal Sunburst
 
 A Vite + React dashboard backed by a Node/Express proxy that aggregates Jira DC data into an interactive sunburst visualisation. The app lets TPO stakeholders explore Goals, related Impacts, downstream delivery work, and SPO Objectives for a selected PI.
 
@@ -73,13 +73,13 @@ Automated tests are not yet included; add Vitest/Jest and API contract tests as 
 Build & run locally:
 
 ```bash
-docker build -t jira-goal-starburst .
+docker build -t jira-goal-sunburst .
 docker run --rm -p 8080:8080 \
   -e JIRA_BASE_URL=https://jira.example.com \
   -e JIRA_TOKEN=your_token_here \
   -e APP_ORIGIN=http://localhost:8080 \
   -e PORT=8080 \
-  jira-goal-starburst
+  jira-goal-sunburst
 ```
 
 Alternatively, use `docker-compose up --build` to apply the defaults in `docker-compose.yml`.
