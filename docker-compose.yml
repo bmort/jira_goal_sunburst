@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  jira-goal-starburst:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      PORT: 8080
+      JIRA_BASE_URL: https://jira.example.com
+      JIRA_TOKEN: your_token_here
+      JIRA_REJECT_UNAUTHORIZED: "true"
+      APP_ORIGIN: http://localhost:5173
+    command: ["node", "dist/server/index.js"]

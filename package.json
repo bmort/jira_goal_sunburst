@@ -1,0 +1,43 @@
+{
+  "name": "jira-goal-starburst",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm:dev:server\" \"npm:dev:client\"",
+    "dev:client": "vite",
+    "dev:server": "tsx watch --tsconfig tsconfig.server.json server/index.ts",
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "vite build",
+    "build:server": "tsc -p tsconfig.server.json",
+    "preview": "node dist/server/index.js",
+    "start": "node dist/server/index.js",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.24.0",
+    "clsx": "^2.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sunburst-chart": "^1.19.1",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.10.5",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.16",
+    "concurrently": "^8.2.2",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.3.5",
+    "tsx": "^4.7.1",
+    "typescript": "^5.3.3",
+    "vite": "^7.1.7",
+    "vitest": "^3.2.4"
+  }
+}
