@@ -14,6 +14,7 @@ export interface AppConfig {
   limits: {
     maxNodes: number;
     versionCacheTtlMs: number;
+    sunburstCacheTtlMs: number;
   };
 }
 
@@ -66,7 +67,8 @@ export function loadConfig(): AppConfig {
     },
     limits: {
       maxNodes: Number(process.env.SUNBURST_MAX_NODES ?? 1_500),
-      versionCacheTtlMs: Number(process.env.VERSION_CACHE_TTL_MS ?? 5 * 60 * 1000)
+      versionCacheTtlMs: Number(process.env.VERSION_CACHE_TTL_MS ?? 5 * 60 * 1000),
+      sunburstCacheTtlMs: Number(process.env.SUNBURST_CACHE_TTL_MS ?? 30 * 60 * 1000)
     }
   };
 }
